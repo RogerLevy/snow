@@ -4,8 +4,7 @@ require lib/window.vfx
 
 4e fvalue zoom
 320 4 *  240 4 * 1 window
-
-include shed.vfx
+display 0 0 al_set_window_position
 
 : center
     winw 2 /  gamew zoom sf* 2 / -
@@ -13,9 +12,9 @@ include shed.vfx
 ;
 viewport as :> draw> center matte zoom f>p dup sx v! ;
 
-:noname [ is quit ] bye ; 
-display 0 0 al_set_window_position
-include test.vfx
-toggle ui remove
+include shed.vfx
+include snow.vfx
 
+toggle ui remove
+:noname [ is quit ] bye ; 
 go 
